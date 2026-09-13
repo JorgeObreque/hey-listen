@@ -421,7 +421,8 @@ button {
 /* Edge controls */
 .support,
 .share,
-.audio-toggle {
+.audio-toggle,
+.source-link {
   position: fixed;
   z-index: 9;
   bottom: max(24px, env(safe-area-inset-bottom));
@@ -533,6 +534,50 @@ button {
 .audio-toggle:hover::after,
 .audio-toggle.on::after { border-color: rgba(169, 215, 238, .42); box-shadow: 0 0 14px rgba(104, 178, 218, .12); }
 
+/* GitHub source link */
+.source-link {
+  position: fixed;
+  z-index: 9;
+  right: max(74px, calc(env(safe-area-inset-right) + 54px));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color .35s ease, text-shadow .35s ease, transform .35s cubic-bezier(.2, .8, .2, 1);
+}
+
+.source-link::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(136, 166, 179, .18);
+  transform: rotate(45deg);
+  transition: border-color .35s ease, box-shadow .35s ease;
+}
+
+.source-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: fill .35s ease;
+}
+
+.source-link:hover,
+.source-link:focus-visible {
+  color: rgba(220, 232, 235, .9);
+  text-shadow: 0 0 12px rgba(160, 204, 226, .35);
+  transform: translateY(-2px);
+}
+
+.source-link:hover::after,
+.source-link:focus-visible::after {
+  border-color: rgba(169, 215, 238, .42);
+  box-shadow: 0 0 14px rgba(104, 178, 218, .12);
+}
+
 /* Released */
 .released {
   position: fixed;
@@ -579,6 +624,9 @@ button {
   .support { left: max(4px, env(safe-area-inset-left)); bottom: max(54px, calc(env(safe-area-inset-bottom) + 42px)); gap: 7px; font-size: .42rem; letter-spacing: .18em; white-space: normal; }
   .support-rupee { width: 50px; height: 69px; }
   .audio-toggle { bottom: max(13px, env(safe-area-inset-bottom)); right: max(8px, env(safe-area-inset-right)); }
+  .source-link { right: max(60px, calc(env(safe-area-inset-right) + 52px)); bottom: max(13px, env(safe-area-inset-bottom)); width: 36px; height: 36px; }
+  .source-link::after { inset: 5px; }
+  .source-icon { width: 16px; height: 16px; }
 }
 
 @media (max-height: 620px) and (orientation: landscape) {

@@ -4,6 +4,7 @@ export const RELEASE_TIMEZONE_LABEL = "Chile";
 
 export const SITE_URL = "https://hey-listen.link";
 export const SUPPORT_URL = "https://buymeacoffee.com/jobreque1337";
+export const SOURCE_URL = "https://github.com/JorgeObreque/hey-listen";
 
 export const SHARE_BASE = "The legend returns. ⏳";
 export const SITE_HANDLE = "hey-listen.link";
