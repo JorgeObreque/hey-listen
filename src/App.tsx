@@ -141,6 +141,10 @@ export function App() {
       <a
         className="support"
         href={SUPPORT_URL}
+        onClick={() => {
+          const gtag = (window as typeof window & { gtag?: (...args: unknown[]) => void }).gtag;
+          gtag?.("event", "cta_support_click", { event_category: "support", event_label: "buy_me_a_coffee" });
+        }}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Support this independent fan project on Buy Me a Coffee"

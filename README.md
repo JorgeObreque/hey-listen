@@ -94,3 +94,11 @@ All audio is generated in real time with the Web Audio API — no asset files. W
 - All imagery is SVG. All effects are CSS or `<canvas>`.
 - No backend, no database, no auth, completely static.
 - Lighthouse target: Performance > 95.
+
+## Analytics
+
+Audience traffic is measured with Google Analytics 4 (`G-PRN8PB9YN4`).
+
+- Loaded directly via `gtag.js` in `public/index.html`, with `async` to avoid blocking render.
+- IP addresses are anonymized (`anonymize_ip: true`); no cookie consent banner is required for this lightweight measurement.
+- The `KEEP THE LIGHT ALIVE` link fires a `cta_support_click` event to track engagement with the support call to action.
