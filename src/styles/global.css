@@ -71,6 +71,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
+  opacity: .88;
   background: radial-gradient(
     circle var(--navi-light-radius) at var(--navi-x) var(--navi-y),
     rgba(1, 4, 9, 0) 0 7%,
