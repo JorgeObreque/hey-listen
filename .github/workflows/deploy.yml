@@ -23,10 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -41,10 +41,12 @@ jobs:
         run: npm run build
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::748624205370:role/hey-listen-github-deploy
           aws-region: ${{ env.AWS_REGION }}
+          role-session-name: hey-listen-deploy-${{ github.run_id }}
+          allowed-account-ids: 748624205370
 
       - name: Upload cached assets
         run: >-
