@@ -26,7 +26,7 @@ const options = {
 };
 
 async function copyStatics() {
-  for (const f of ["index.html", "favicon.svg", "og.svg", "robots.txt", "sitemap.xml"]) {
+  for (const f of ["index.html", "favicon.svg", "og.svg", "og.png", "robots.txt", "sitemap.xml"]) {
     if (existsSync(`public/${f}`)) await copyFile(`public/${f}`, `${outdir}/${f}`);
   }
   await mkdir(`${outdir}/images`, { recursive: true });

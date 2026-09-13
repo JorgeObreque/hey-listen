@@ -102,3 +102,15 @@ Audience traffic is measured with Google Analytics 4 (`G-PRN8PB9YN4`).
 - Loaded directly via `gtag.js` in `public/index.html`, with `async` to avoid blocking render.
 - IP addresses are anonymized (`anonymize_ip: true`); no cookie consent banner is required for this lightweight measurement.
 - The `KEEP THE LIGHT ALIVE` link fires a `cta_support_click` event to track engagement with the support call to action.
+
+## Open Graph and Twitter Cards
+
+The site ships with a dedicated share image at `public/og.png` (`1200×630`, ~64 KB) and the full set of Open Graph plus Twitter Card meta tags in `public/index.html`:
+
+- `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:locale`
+- `og:image`, `og:image:secure_url`, `og:image:width`, `og:image:height`, `og:image:alt`
+- `twitter:card` set to `summary_large_image`
+- Matching `twitter:title`, `twitter:description`, `twitter:image`, `twitter:image:alt`
+- `<link rel="canonical" href="https://hey-listen.link/" />`
+
+`public/og.svg` is kept only as a historical fallback and is no longer referenced from the HTML.
