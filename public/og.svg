@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="60%" r="80%">
+      <stop offset="0%" stop-color="#101a2b" />
+      <stop offset="60%" stop-color="#06070d" />
+      <stop offset="100%" stop-color="#020308" />
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cfeaff" />
+      <stop offset="60%" stop-color="#6fb8ff" stop-opacity=".4" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)" />
+  <g opacity=".5">
+    <circle cx="120" cy="120" r="1" fill="#fff" />
+    <circle cx="320" cy="80" r="1.2" fill="#fff" />
+    <circle cx="860" cy="140" r="1" fill="#fff" />
+    <circle cx="1080" cy="60" r="1.4" fill="#fff" />
+    <circle cx="980" cy="220" r="1" fill="#fff" />
+    <circle cx="540" cy="100" r="1.2" fill="#fff" />
+  </g>
+  <circle cx="600" cy="320" r="220" fill="url(#glow)" />
+  <circle cx="600" cy="320" r="10" fill="#fff" opacity=".95" />
+  <text x="50%" y="470" text-anchor="middle" font-family="Inter, sans-serif" font-size="64" font-weight="500" letter-spacing="6" fill="#e9f6ff">HEY! LISTEN!</text>
+  <text x="50%" y="540" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="36" fill="#9fb4cf">The legend returns.</text>
+  <text x="50%" y="600" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" letter-spacing="4" fill="#7f93ad">heylisten.link</text>
+</svg>
